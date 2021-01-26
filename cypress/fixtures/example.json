@@ -1,0 +1,13 @@
+{
+  "name": "Using fixtures to represent data",
+  "email": "hello@cypress.io",
+  "body": "Fixtures are a great way to mock data for responses to routes",
+  "titleColor": "rgb(255, 255, 255)",
+  "username": "wcms-sp-test@trashmail.de",
+  "password": "test4swisspass",
+  "user": "WS",
+  "contentwidth": "1594",
+  "colorBlack": "rgb(0, 0, 0)",
+  "leisureSearch": "Bern",
+  "bottomTeaserTitle": "Weitere Freizeit & Ferien Tipps."
+}
