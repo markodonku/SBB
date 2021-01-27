@@ -3,7 +3,7 @@
 import LeisureHolidayPage from '../../support/PageObject/LisureHolidayPage'
 
 
-describe('Testing Home Page',function(){
+describe('Testing Leisure and Holiday filter',function(){
 
     beforeEach(() => {
         // runs once before each test in the block

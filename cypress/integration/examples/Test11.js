@@ -3,7 +3,7 @@
 import BahnhofServicesPage from '../../support/PageObject/BahnhofServicesPage'
 
 
-describe('Bahnhof services page',function(){
+describe('Bahnhof services search page',function(){
 
     beforeEach(() => {
         // runs once before each test in the block

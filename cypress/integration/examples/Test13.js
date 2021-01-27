@@ -3,7 +3,7 @@
 import LeisureHolidayPage from '../../support/PageObject/LisureHolidayPage'
 
 
-describe('Testing leisure&holiday detail page',function(){
+describe('Testing bahnhof services detail page',function(){
 
     beforeEach(() => {
         // runs once before each test in the block
@@ -13,28 +13,11 @@ describe('Testing leisure&holiday detail page',function(){
           this.data=data
         })
         
-        cy.visit(Cypress.env('url')+'de/freizeit-ferien/ideen/angebot.html/veranstaltungen/fondation-pierre-gianadda-martigny')
+        cy.visit(Cypress.env('url')+'de/bahnhof-services/am-bahnhof/bahnhoefe/bahnhof-finden/bahnhof.4489.bern-buempliz-nord.html')
 
       })
 
     const leisurePage=new LeisureHolidayPage()
-
-
-it('Bottom teaser visible',function()
- {
-    cy.wait(3000) 
-    leisurePage.getBottomTeaser().find('.mod_lh_teaser_homepage_container').should('be.visible')
-    leisurePage.getBottomTeaser().find('div > h2').then(function(el)
-    {
-        const title=el.text()
-        cy.log(title)
-        if(title.includes("Weitere Freizeit & Ferien Tipps."))
-        {
-            cy.log('Title is correct')
-        }
-
-    })
-})
 
     it('Language change is possible',function()
     {

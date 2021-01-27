@@ -3,7 +3,7 @@
 import BahnhofServicesPage from '../../support/PageObject/BahnhofServicesPage'
 
 
-describe('Shops bage/filter test',function(){
+describe('Shops bage visibility and filter test',function(){
 
     beforeEach(() => {
         // runs once before each test in the block

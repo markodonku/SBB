@@ -3,7 +3,7 @@
 import HomePage from '../../support/PageObject/HomePage'
 import '@4tw/cypress-drag-drop'
 
-describe('Testing SwissPass login',function(){
+describe('Testing Touch timetable',function(){
 
     beforeEach(() => {
         // runs once before each test in the block
