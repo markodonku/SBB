@@ -44,7 +44,7 @@ it('Bottom teaser visible',function()
             if($el.hasClass('mod_langnav_desktop_list_item is_active'))
             {
      
-                cy.log($el.find('p').prop('lang'))
+                //cy.log($el.find('p').prop('lang'))
                 cy.url().should('contain', '/'+$el.find('p').prop('lang')+'/')
                 cy.log('ok')
             }
@@ -53,17 +53,19 @@ it('Bottom teaser visible',function()
             {
               //cy.get('.mod_langnav_desktop_linkitem').click()
               //cy.wait(2000)
-              cy.log($el.find('a').text())
-              cy.get('.mod_langnav_desktop_linkitem_label').then(function(text)
+              //cy.log($el.find('a').text())
+              /*cy.get('.mod_langnav_desktop_linkitem_label').then(function(text)
               {
                   const language=text.text()
                   cy.log(language)
-              })
+              })*/
+              
               cy.visit($el.find('a').prop('href'))
               cy.wait(2000)
               if(cy.url().should('contain', '/'+$el.find('a').prop('lang')+'/'))
               {
                   cy.log('Language change is OK')
+                  
               }
               cy.wait(2000)
             }
