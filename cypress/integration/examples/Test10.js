@@ -59,15 +59,16 @@ it('Bottom teaser visible',function()
                   const language=text.text()
                   cy.log(language)
               })*/
-              
+
               cy.visit($el.find('a').prop('href'))
               cy.wait(2000)
               if(cy.url().should('contain', '/'+$el.find('a').prop('lang')+'/'))
               {
-                  cy.log('Language change is OK')
-                  
+                  cy.log('Language is OK') 
               }
               cy.wait(2000)
+
+
             }
         
         })

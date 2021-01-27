@@ -11,5 +11,6 @@
   "leisureSearch": "Bern",
   "bottomTeaserTitle": "Weitere Freizeit & Ferien Tipps.",
   "stationName": "Basel SBB",
-  "shopName": "Amavita"
+  "shopName": "Amavita",
+  "languages": ["Deutsch","Français","Italiano","English"]
 }

@@ -60,3 +60,4 @@ Cypress.Commands.add("dragTo", { prevSubject: "element" }, (subject, targetEl) =
   }
 );
 
+
