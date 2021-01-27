@@ -62,6 +62,13 @@ it('Bottom teaser visible',function()
 
               cy.visit($el.find('a').prop('href'))
               cy.wait(2000)
+
+              cy.get('.mod_langnav_desktop_linkitem_label').then(function(text)
+              {
+                  const language=text.text()
+                  expect($el.find('a').text()).to.contain(language)
+              })
+
               if(cy.url().should('contain', '/'+$el.find('a').prop('lang')+'/'))
               {
                   cy.log('Language is OK') 
