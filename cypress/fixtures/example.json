@@ -12,5 +12,6 @@
   "bottomTeaserTitle": "Weitere Freizeit & Ferien Tipps.",
   "stationName": "Basel SBB",
   "shopName": "Amavita",
-  "languages": ["Deutsch","Français","Italiano","English"]
+  "languages": ["Deutsch","Français","Italiano","English"],
+  "searchItem": "Lokführer"
 }

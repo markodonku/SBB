@@ -8,6 +8,7 @@
     "viewportWidth" : 1600,
     "env": {
         "url": "https://int-www.sbb.ch/",
-        "urlcompany": "https://int-company.sbb.ch/de/home.html"
+        "urlcompany": "https://int-company.sbb.ch/de/home.html",
+        "urlsearch": "https://int-www.sbb.ch/de/meta/seiten/suche.html"
       }
 }
