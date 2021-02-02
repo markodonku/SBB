@@ -1,4 +1,6 @@
 // ***********************************************
+import promisify from 'cypress-promise'
+
 // This example commands.js shows you how to
 // create various custom commands and overwrite
 // existing commands.
@@ -61,3 +63,23 @@ Cypress.Commands.add("dragTo", { prevSubject: "element" }, (subject, targetEl) =
 );
 
 
+Cypress.Commands.add("iterateDatePicker", (companyPage) => {
+    (async ()=>{
+        do{
+            cy.get('.mod_datepicker_picker_header_button.mod_datepicker_picker_header_year_next').eq(0).click()
+            var godina = await promisify(companyPage.getYear().eq(0).then($el => $el.text()))
+           }
+          while (godina<2018)   
+    }) ()
+    
+});
+
+
+Cypress.Commands.add("yearTo", (companyPage) => {
+    (async()=>{
+        
+        var to = await promisify(companyPage.getYearFirst().find('h2').then($el => $el.text()))
+        cy.log(to)
+
+    })  ()
+})

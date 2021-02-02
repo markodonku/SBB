@@ -13,5 +13,7 @@
   "stationName": "Basel SBB",
   "shopName": "Amavita",
   "languages": ["Deutsch","Français","Italiano","English"],
-  "searchItem": "Lokführer"
+  "searchItem": "Lokführer",
+  "fromdate": "01.01.2018",
+  "todate": "31.12.2019"
 }

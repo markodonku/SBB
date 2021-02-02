@@ -15,6 +15,8 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+import 'cypress-promise/register'
+import 'babel-polyfill'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
