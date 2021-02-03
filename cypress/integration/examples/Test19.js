@@ -4,13 +4,18 @@ describe('Cargo search',function(){
 
     it('Cargo media releases', function()
     {
-      var maxPages=40;
-       var i=1;
+      cy.visit('https://int-www.sbbcargo.com/de/medien/cargo-medienmitteilungen.html?page=1')
+      cy.get('.mod_pagination_list').find('li').then((item)=>
+      {
+        var maxPages=parseInt(item[item.length-2].children[0].getAttribute("data-url").split("&page=")[1]);
+        var i=1;
        for(i=1;i<=maxPages;i++)
-       {
-        getAllLinksChecked(i)
-        cy.wait(2000)
-       }   
+        {
+          getAllLinksChecked(i)
+        }
+
+      })
+     
     })
 })
 
