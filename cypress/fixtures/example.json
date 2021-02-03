@@ -15,5 +15,6 @@
   "languages": ["Deutsch","Français","Italiano","English"],
   "searchItem": "Lokführer",
   "fromdate": "01.01.2018",
-  "todate": "31.12.2019"
+  "todate": "31.12.2019",
+  "mediacheck": "cargo-medienmitteilungen"
 }

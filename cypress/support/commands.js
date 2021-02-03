@@ -77,7 +77,7 @@ Cypress.Commands.add("iterateDatePicker", (companyPage) => {
 
 Cypress.Commands.add("yearTo", (companyPage) => {
     (async()=>{
-        
+
         var to = await promisify(companyPage.getYearFirst().find('h2').then($el => $el.text()))
         cy.log(to)
 
