@@ -1,6 +1,6 @@
 // ***********************************************
 import promisify from 'cypress-promise'
-
+import TravelcardsTickets from '../support/PageObject/TravelacardsTickets'
 // This example commands.js shows you how to
 // create various custom commands and overwrite
 // existing commands.
@@ -83,3 +83,32 @@ Cypress.Commands.add("yearTo", (companyPage) => {
 
     })  ()
 })
+
+
+
+const travelcardsTickets=new TravelcardsTickets()
+Cypress.Commands.add("accordionItem", (TravelcardsTickets) => { 
+    travelcardsTickets.getSecondAccordion().find('.mod_accordion_item').each(($el,index,$list)=>
+    {
+        if($el.find('h3').text().includes('SwissPass'))
+        {
+            $el.find('button[class="mod_accordion_item_link"]').click()
+        }
+    })
+})
+
+
+Cypress.Commands.add('topIsWithinViewport', { prevSubject: true }, subject => {
+    const windowInnerWidth = Cypress.config(`viewportWidth`);
+  
+    const bounding = subject[0].getBoundingClientRect();
+  
+    const rightBoundOfWindow = windowInnerWidth;
+  
+    expect(bounding.top).to.be.at.least(0);
+    expect(bounding.left).to.be.at.least(0);
+    expect(bounding.right).to.be.lessThan(rightBoundOfWindow);
+  
+    return subject;
+  })
+
