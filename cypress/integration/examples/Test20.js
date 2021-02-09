@@ -63,14 +63,14 @@ describe('Testing bahnhof services detail page',function(){
         })
     })
 
-    it('Anchor link on accordion', function()
+    it('Anchor link on accordion work', function()
     {
         cy.visit(Cypress.env('url')+'de/abos-billette/abonnemente/halbtax.html#sbb6f4551')
         travelcardsTickets.getAccordion().topIsWithinViewport()
        
     })
 
-    it('', function()
+    it('PDF can be downloaded', function()
     {
         cy.request('https://int-www.sbb.ch/content/dam/sbb/de/pdf/abos-billette/abonnemente/ga/karte-geltungsbereich-ga-halbtax-stand_d_barrierefrei.pdf.sbbdownload.pdf').then((xhr)=>
         {

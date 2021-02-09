@@ -112,3 +112,15 @@ Cypress.Commands.add('topIsWithinViewport', { prevSubject: true }, subject => {
     return subject;
   })
 
+  Cypress.Commands.add("checkboxChecked", (checkboxes) => { 
+    cy.get('.mod_radio_checkbox_label').each(($el, index, $list) => {
+        
+        if($el.text().includes(checkboxes))
+        {
+            $el.click()
+        }
+    
+    
+        })
+    })
+

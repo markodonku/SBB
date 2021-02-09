@@ -1,7 +1,7 @@
 {
-  "name": "Using fixtures to represent data",
-  "email": "hello@cypress.io",
-  "body": "Fixtures are a great way to mock data for responses to routes",
+  "name": "Marko",
+  "email": "marko.donku@one-inside.com",
+  "surname": "Donku",
   "titleColor": "rgb(255, 255, 255)",
   "username": "wcms-sp-test@trashmail.de",
   "password": "test4swisspass",
@@ -16,5 +16,12 @@
   "searchItem": "Lokführer",
   "fromdate": "01.01.2018",
   "todate": "31.12.2019",
-  "mediacheck": "cargo-medienmitteilungen"
+  "mediacheck": "cargo-medienmitteilungen",
+  "checkboxes": ["Abo vergessen","Ausweiskopie","Herr"],
+  "street": "Rajko Zinzifov",
+  "PLZ": "1000",
+  "place": "Skopje",
+  "telephone": "+38975356784",
+  "bestell": "1234567890",
+  "message": "This is test content, do not consider as official request"
 }

@@ -34,5 +34,55 @@ getAccordion()
 {
     return cy.get(':nth-child(9) > .mod_accordion > :nth-child(1) > .mod_accordion_item_heading > .mod_accordion_item_title > .mod_accordion_item_link')
 }
+
+getNameInput()
+{
+    return cy.get('#sbb4c4ef9')
+}
+
+getSurnameInput()
+{
+    return cy.get('#sbb6f47de')
+}
+
+getStreetInput()
+{
+    return cy.get('#sbbf7c104')
+}
+
+getPLZ()
+{
+    return cy.get('#sbbe672e7')
+}
+
+getPlace()
+{
+    return cy.get('#sbb2da10a')
+}
+
+getEmailInput()
+{
+    return cy.get('#sbb28161e')
+}
+
+getTelephoneInput()
+{
+    return cy.get('#sbbb0d608')
+}
+
+getBestellnummer()
+{
+    return cy.get('#sbb9fa3e0')
+}
+
+getMessageInput()
+{
+    return cy.get('#sbb734755')
+}
+
+getSubmit()
+{
+    return cy.get('.text__primarybutton.button')
+}
 }
 export default TravelcardsTickets;
