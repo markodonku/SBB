@@ -124,3 +124,30 @@ Cypress.Commands.add('topIsWithinViewport', { prevSubject: true }, subject => {
         })
     })
 
+    Cypress.Commands.add("accordionItemOpens", (TravelcardsTickets) => { 
+        
+        travelcardsTickets.getAccordionItem().each(($el,index,$list)=>
+        {
+            if($el.prop('class').includes('is_closed'))
+            {
+                $el.find('button[class="mod_accordion_item_link"]').click()
+                
+            }
+            
+        })
+    })
+
+
+    Cypress.Commands.add("accordionItemCloses", (TravelcardsTickets) => { 
+        
+        travelcardsTickets.getAccordionItem().each(($el,index,$list)=>
+        {
+            if($el.prop('class').includes('is_open'))
+            {
+                $el.find('button[class="mod_accordion_item_link"]').click()
+                
+            }
+            
+        })
+    })
+

@@ -84,5 +84,30 @@ getSubmit()
 {
     return cy.get('.text__primarybutton.button')
 }
+
+getAccordionItem()
+{
+    return cy.get('.mod_accordion_item')
+}
+
+getPaymentList()
+{
+    return cy.get('.mod_payment_options_list')
+}
+
+getPromoCodeText()
+{
+    return cy.get('#promo_code_value_label')
+}
+
+getPromoCodeInput()
+{
+    return cy.get('#promo_code_value')
+}
+
+getPromoCodeSubmit()
+{
+    return cy.get('.button.text__secondarybutton')
+}
 }
 export default TravelcardsTickets;
