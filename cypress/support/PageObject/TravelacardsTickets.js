@@ -109,5 +109,40 @@ getPromoCodeSubmit()
 {
     return cy.get('.button.text__secondarybutton')
 }
+
+getPopularTopics()
+{
+    return cy.get('.mod_popular_topics')
+}
+
+getManualTeaserItems()
+{
+    return cy.get('.mod_lh_teaser_homepage_teasers_list_item')
+}
+
+getCampaignTeaser()
+{
+    return cy.get('.mod_cp_campaign_teaser')
+}
+
+getGeneralSupplyTeaser()
+{
+    return cy.get('.mod_general_supply_teasers')
+}
+
+getGeneralSupplyItems()
+{
+    return cy.get('.mod_general_supply_teasers_list_item')
+}
+
+getSocialStream()
+{
+    return cy.get('.mod_socialstream ')
+}
+
+getLogoBarItems()
+{
+    return cy.get('.mod_sponsor_bar_list_item')
+}
 }
 export default TravelcardsTickets;
