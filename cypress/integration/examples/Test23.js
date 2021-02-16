@@ -12,13 +12,14 @@ describe('Testing Greenclass page',function(){
         {
           this.data=data
         })
-        cy.visit(Cypress.env('url')+'de/abos-billette/abonnemente/greenclass.html')
+        
       })
 
     const travelcardsTickets=new TravelcardsTickets()
 
-    it('Popular Topics is displayed',function()
+    it('Popular Topics are displayed',function()
     {
+      cy.visit(Cypress.env('url')+'de/abos-billette/abonnemente/greenclass.html')
         travelcardsTickets.getPopularTopics().should('be.visible')
         if(cy.get('.mod_popular_topics_buttons').should('be.visible'))
         {

@@ -12,16 +12,17 @@ describe('Testing Promo-Code',function(){
         {
           this.data=data
         })
-        cy.visit(Cypress.env('url')+'de/abos-billette/kaufmoeglichkeiten/abos-und-billette-kaufen.html')
+        
       })
 
     const travelcardsTickets=new TravelcardsTickets()
 
     it('Accordion entries can be opened',function()
     {
-        cy.accordionItemOpens(TravelcardsTickets)
-        cy.wait(1000)
-        travelcardsTickets.getAccordionItem().each(($el,index,$list)=>
+      cy.visit(Cypress.env('url')+'de/abos-billette/kaufmoeglichkeiten/abos-und-billette-kaufen.html')
+      cy.accordionItemOpens(TravelcardsTickets)
+      cy.wait(1000)
+      travelcardsTickets.getAccordionItem().each(($el,index,$list)=>
         {
           expect($el).to.have.class('mod_accordion_item is_open is_visible')
         })

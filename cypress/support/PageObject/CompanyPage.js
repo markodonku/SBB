@@ -45,6 +45,11 @@ getResetButton()
     return cy.get('.mod_group')
 }
 
+getFilterButton()
+{
+    return cy.get('.mod_accordion_item_link')
+}
+
 }
 
 export default CompanyPage;

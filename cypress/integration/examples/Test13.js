@@ -13,7 +13,7 @@ describe('Testing bahnhof services detail page',function(){
           this.data=data
         })
         
-        cy.visit(Cypress.env('url')+'de/bahnhof-services/am-bahnhof/bahnhoefe/bahnhof-finden/bahnhof.4489.bern-buempliz-nord.html')
+        
 
       })
 
@@ -21,7 +21,7 @@ describe('Testing bahnhof services detail page',function(){
 
     it('Language change is possible',function()
     {
-
+        cy.visit(Cypress.env('url')+'de/bahnhof-services/am-bahnhof/bahnhoefe/bahnhof-finden/bahnhof.4489.bern-buempliz-nord.html')
         cy.get('.mod_langnav_desktop_list_item').each(($el, index, $list) => {
            
             if($el.hasClass('mod_langnav_desktop_list_item is_active'))

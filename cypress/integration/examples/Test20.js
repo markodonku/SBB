@@ -12,13 +12,14 @@ describe('Testing bahnhof services detail page',function(){
         {
           this.data=data
         })
-        cy.visit(Cypress.env('url')+'de/abos-billette/abonnemente/halbtax.html')
+        
       })
 
     const travelcardsTickets=new TravelcardsTickets()
 
     it('Keyvisual is visible',function()
     {
+        cy.visit(Cypress.env('url')+'de/abos-billette/abonnemente/halbtax.html')
         travelcardsTickets.getKeyvisual().should('be.visible')
     })
 

@@ -25,7 +25,7 @@ describe('Company filter test',function(){
     {
        if(companyPage.getFilter().should('have.class', 'mod_accordion_item is_closed'))
        {
-         companyPage.getFilter().click()
+         companyPage.getFilterButton().click()
        }
        cy.wait(2000)
        

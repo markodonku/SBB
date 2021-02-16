@@ -12,16 +12,13 @@ describe('Testing Shops detail page',function(){
         {
           this.data=data
         })
-        
-        cy.visit(Cypress.env('url')+'de/bahnhof-services/am-bahnhof/bahnhoefe/bahnhof-bern/geschaefte/shop-detail.html/geo-migros-e50c')
-
       })
 
     const leisurePage=new LeisureHolidayPage()
 
     it('Language change is possible',function()
     {
-
+        cy.visit(Cypress.env('url')+'de/bahnhof-services/am-bahnhof/bahnhoefe/bahnhof-bern/geschaefte/shop-detail.html/geo-migros-e50c')
         cy.get('.mod_langnav_desktop_list_item').each(($el, index, $list) => {
            
             if($el.hasClass('mod_langnav_desktop_list_item is_active'))
