@@ -144,5 +144,10 @@ getLogoBarItems()
 {
     return cy.get('.mod_sponsor_bar_list_item')
 }
+
+getOfferModule()
+{
+    return cy.get('.mod_cp_product_comparison_list_item')
+}
 }
 export default TravelcardsTickets;

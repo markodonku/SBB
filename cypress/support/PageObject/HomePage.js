@@ -53,12 +53,12 @@ getHeader()
 
 getLeisureHoliday()
 {
-    return cy.get('#ui-id-111')
+    return cy.get('#ui-id-114')
 }
 
 getBadge()
 {
-    return cy.get('#ui-id-133')
+    return cy.get('.mod_lh_badge_megadropdown')
 }
 
 getLoginButton()

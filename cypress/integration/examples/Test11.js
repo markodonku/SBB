@@ -12,13 +12,23 @@ describe('Bahnhof services search page',function(){
         {
           this.data=data
         })
-        
-        cy.visit(Cypress.env('url')+'/de/bahnhof-services/am-bahnhof/bahnhoefe.html')
-
       })
 
     const bahnhofServices=new BahnhofServicesPage()
 
+it('Map is visible', function()
+ {
+    cy.visit(Cypress.env('url')+'/de/bahnhof-services/am-bahnhof/bahnhoefe.html')
+    bahnhofServices.getMapButton().click()
+    cy.wait(2000)
+    bahnhofServices.getMap().should('be.visible')
+
+    bahnhofServices.getMarkers().each(($el, index, $list) => {
+
+        expect($el).to.be.visible
+
+     })
+ })
 
 it('Auto suggest',function()
  {
@@ -39,19 +49,6 @@ it('Auto suggest',function()
 
         }
     })
- })
-
- it('Map is visible', function()
- {
-     bahnhofServices.getMapButton().click()
-     cy.wait(2000)
-     bahnhofServices.getMap().should('be.visible')
-
-     bahnhofServices.getMarkers().each(($el, index, $list) => {
-
-        expect($el).to.be.visible
-
-     })
  })
 })
 

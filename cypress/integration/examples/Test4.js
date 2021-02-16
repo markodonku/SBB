@@ -11,9 +11,6 @@ describe('Testing Company Page',function(){
         {
           this.data=data
         })
-        
-        cy.visit(Cypress.env('urlcompany'))
-
       })
 
     const companyPage=new CompanyPage()
@@ -21,7 +18,7 @@ describe('Testing Company Page',function(){
 
 it('Slider title color',function()
  {
-
+    cy.visit(Cypress.env('urlcompany'))
     companyPage.getSliderTitle().each(($el, index, $list)=>
     {
         if(expect($el).to.have.css('color', this.data.titleColor))

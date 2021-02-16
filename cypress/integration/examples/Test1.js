@@ -12,7 +12,7 @@ describe('Testing Home Page',function(){
           this.data=data
         })
         
-        cy.visit(Cypress.env('url'))
+        
 
       })
 
@@ -21,7 +21,7 @@ describe('Testing Home Page',function(){
 
 it('Logo is visible',function()
  {
-
+   cy.visit(Cypress.env('url'))
    homePage.getSBBLogo().should('be.visible')
 
  })
@@ -81,16 +81,6 @@ it('Header icons visible',function()
     })
 })
 
-it('Login overlay',function()
-{
-    cy.get('[data-metanav="profile"] > .mod_metanav_linkitem').click()
-    cy.wait(3000)
-    if(homePage.getOverlay().should('be.visible'))
-    {
-        cy.log('Overlay is opened')
-    }
-})
-
 it('Footer',function()
 {
     homePage.getFooterClock().should('be.visible')
@@ -113,8 +103,19 @@ it('Header expandable',function()
 it('F&FBadgeVisible',function()
 {
     homePage.getLeisureHoliday().trigger('mouseover')
+    cy.wait(2000)
     homePage.getBadge().should('be.visible')
 
+})
+
+it('Login overlay',function()
+{
+    cy.get('[data-metanav="profile"] > .mod_metanav_linkitem').click()
+    cy.wait(3000)
+    if(homePage.getOverlay().should('be.visible'))
+    {
+        cy.log('Overlay is opened')
+    }
 })
 
 })

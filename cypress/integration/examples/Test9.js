@@ -12,9 +12,6 @@ describe('Testing Leisure and Holiday filter',function(){
         {
           this.data=data
         })
-        
-        cy.visit(Cypress.env('url')+'de/freizeit-ferien/ideen.html')
-
       })
 
     const leisurePage=new LeisureHolidayPage()
@@ -22,26 +19,8 @@ describe('Testing Leisure and Holiday filter',function(){
 
 it('Filter visible',function()
  {
-     leisurePage.getLeisureFinder().should('be.visible')
-})
-
-it('Leisure Search', function()
-{
-    
-   leisurePage.getRegionSearchField().type('ber')
-   cy.wait(3000)
-   cy.get('.mod_autocomplete_suggestion').find('p').each(($el, index, $list) => {
-
-    if($el.text()===this.data.leisureSearch)
-    {
-        $el.click()
-    
-   }
-   cy.wait(2000)
-   leisurePage.getSearchButton().click()
-   cy.wait(2000)
-   leisurePage.getSearchResults().should('be.visible')
-})
+    cy.visit(Cypress.env('url')+'de/freizeit-ferien/ideen.html')
+    leisurePage.getLeisureFinder().should('be.visible')
 })
 
 it('Offer number check', function()
@@ -73,6 +52,23 @@ it('Offer can be opened',function()
     })
 })
 
+it('Leisure Search', function()
+{
+    cy.visit(Cypress.env('url')+'de/freizeit-ferien/ideen.html')
+   leisurePage.getRegionSearchField().type('ber')
+   cy.wait(3000)
+   cy.get('.mod_autocomplete_suggestion').find('p').each(($el, index, $list) => {
 
+    if($el.text()===this.data.leisureSearch)
+    {
+        $el.click()
+    
+   }
+   cy.wait(2000)
+   leisurePage.getSearchButton().click()
+   cy.wait(2000)
+   leisurePage.getSearchResults().should('be.visible')
+})
+})
 
 })

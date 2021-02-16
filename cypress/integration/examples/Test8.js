@@ -13,7 +13,7 @@ describe('Testing  Leisure and Holiday page',function(){
           this.data=data
         })
         
-        cy.visit(Cypress.env('url')+'de/freizeit-ferien/freizeitangebote.html')
+        
 
       })
 
@@ -22,6 +22,7 @@ describe('Testing  Leisure and Holiday page',function(){
 
 it('Gradient Image',function()
  {
+    cy.visit(Cypress.env('url')+'de/freizeit-ferien/freizeitangebote.html')
      leisurePage.getGradientImage().should('be.visible')
 })
 

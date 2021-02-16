@@ -12,9 +12,6 @@ describe('Shops bage visibility and filter test',function(){
         {
           this.data=data
         })
-        
-        cy.visit(Cypress.env('url')+'/de/bahnhof-services/am-bahnhof/bahnhoefe/shopville-zuerich-hauptbahnhof.html')
-
       })
 
     const bahnhofServices=new BahnhofServicesPage()
@@ -22,6 +19,7 @@ describe('Shops bage visibility and filter test',function(){
 
 it('Shops badge apears',function()
  {
+    cy.visit(Cypress.env('url')+'/de/bahnhof-services/am-bahnhof/bahnhoefe/shopville-zuerich-hauptbahnhof.html')
     bahnhofServices.getShopBadge().should('be.visible')
  })
 
@@ -40,8 +38,6 @@ it('Shops badge apears',function()
 
  it('Filter works', function()
  {
-    bahnhofServices.getShopBadge().click()
-    cy.wait(2000)
     bahnhofServices.getFilterInput().type('ama')
     cy.wait(2000)
     cy.get('.mod_autocomplete_suggestion').find('p').each(($el,index,$list) =>
@@ -51,9 +47,13 @@ it('Shops badge apears',function()
         if(name===this.data.shopName)
         {
             $el.click()
+            cy.wait(1000)
         }
     })
-    bahnhofServices.getOpenShops().find('.mod_shops_services_list').should('be.visible')
+    bahnhofServices.getAllShops().find('.mod_shops_services_listitem').each(($el,index,$list)=>
+    {
+        expect($el).to.be.visible
+    })
  })
 })
 

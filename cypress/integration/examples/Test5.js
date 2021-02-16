@@ -3,18 +3,9 @@
 
 describe('Testing Contentwide Teaser',function(){
 
-    beforeEach(() => {
-        // runs once before each test in the block
-   
-        cy.visit(Cypress.env('url')+"de/abos-billette.html")
-
-      })
-
-    
-
-
 it('Contentwide Teaser',function()
  {
+    cy.visit(Cypress.env('url')+"de/abos-billette.html")
     cy.get('.layout_center').find('.mod_content_wide_teaser').should('be.visible')
 
  })
