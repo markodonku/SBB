@@ -21,7 +21,7 @@ describe('Testing Home Page',function(){
 
 it('Logo is visible',function()
  {
-   cy.visit(Cypress.env('url'))
+   cy.visit(Cypress.env('url')+'?bsdfbgh')
    homePage.getSBBLogo().should('be.visible')
 
  })

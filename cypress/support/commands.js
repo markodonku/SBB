@@ -1,6 +1,7 @@
 // ***********************************************
 import promisify from 'cypress-promise'
 import TravelcardsTickets from '../support/PageObject/TravelacardsTickets'
+import CampaignPage from '../support/PageObject/CampaignPage'
 // This example commands.js shows you how to
 // create various custom commands and overwrite
 // existing commands.
@@ -151,3 +152,20 @@ Cypress.Commands.add('topIsWithinViewport', { prevSubject: true }, subject => {
         })
     })
 
+
+    const campaignPage=new CampaignPage()
+    Cypress.Commands.add("backgroundColor", (CampaignPage) => { 
+        campaignPage.getFullWidthItem().each(($el,index,$list)=>
+      {
+        if(index%2===0)
+        {
+          //expect($el).to.have.class('layout_full_width var_diagonal')
+          expect($el).to.have.css('background-color','rgba(0, 0, 0, 0)')
+        }
+        else
+        {
+          expect($el).to.have.class('layout_full_width var_diagonal var_dark')
+          expect($el).to.have.css('background-color','rgb(246, 246, 246)')
+        }
+      })
+    })

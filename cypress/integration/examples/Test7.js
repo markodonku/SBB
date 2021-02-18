@@ -20,6 +20,7 @@ describe('White link title',function(){
 
 it('Leisure&Holiday Teaser',function()
  {
+   cy.wait(2000)
    cy.get('.mod_lh_teaser_homepage_teasers_list_item').find('h3').each(($el,index,$list)=>{
        
        expect($el).to.have.css('color', this.data.titleColor)
