@@ -50,6 +50,22 @@ getFilterButton()
     return cy.get('.mod_accordion_item_link')
 }
 
+getBubbles()
+{
+    return cy.get('#mCSB_1_container')
+}
+
+getVideo()
+{
+    return cy.get('.mod_video_snippet_video_list')
+}
+
+getPlayButton()
+{
+    return cy.get('.mod_video_snippets_teaser_play_button_wrapper')
+}
+
+
 }
 
 export default CompanyPage;
