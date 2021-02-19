@@ -42,7 +42,6 @@ it('Play/Pauze button ok', function()
 
 it('Teaser bubbles url works', function()
 {
-    //cy.visit('https://int-company.sbb.ch/de/jobs-karriere/beweg-die-schweiz-mit-uns.html?fsef')
     cy.get('.mod_videobubble').each(($el,index,$list)=>
     {
         cy.request($el.find('a').prop('href')).then((response)=>
