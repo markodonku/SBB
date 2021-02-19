@@ -65,6 +65,11 @@ getPlayButton()
     return cy.get('.mod_video_snippets_teaser_play_button_wrapper')
 }
 
+getDeepLinkTeaser()
+{
+    return cy.get('.mod_deeplinkteaser_list_item')
+}
+
 
 }
 
