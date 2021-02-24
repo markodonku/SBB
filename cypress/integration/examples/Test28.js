@@ -53,7 +53,7 @@ it('Quotes are displayed', function()
 
 it('Portrait switch works', async()=>
 {
-    //cy.visit('https://int-company.sbb.ch/de/jobs-karriere/beweg-die-schweiz-mit-uns/bahnberufe/berufsbild-lokfuehrerin.html')
+    companyPage.getPortraitSwitch().should('be.visible')
     
     let currentUrl = await new Promise(resolve => cy.url().then(tempVar => {
         resolve(tempVar)
