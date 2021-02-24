@@ -159,7 +159,7 @@ Cypress.Commands.add('topIsWithinViewport', { prevSubject: true }, subject => {
       {
         if(index%2===0)
         {
-          //expect($el).to.have.class('layout_full_width var_diagonal')
+          expect($el).to.have.class('layout_full_width var_diagonal')
           expect($el).to.have.css('background-color','rgba(0, 0, 0, 0)')
         }
         else

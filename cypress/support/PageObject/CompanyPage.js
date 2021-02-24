@@ -70,6 +70,26 @@ getDeepLinkTeaser()
     return cy.get('.mod_deeplinkteaser_list_item')
 }
 
+getPortraitVideo()
+{
+    return cy.get('.mod_video')
+}
+
+getOpenPositions()
+{
+    return cy.get('.mod_nbc_content_links')
+}
+
+getQuotes()
+{
+    return cy.get('.mod_quote')
+}
+
+getPortraitSwitch()
+{
+    return cy.get('.mod_portrait_switch')
+}
+
 
 }
 
