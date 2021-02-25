@@ -59,23 +59,15 @@ it('Portrait switch works', async()=>
         resolve(tempVar)
     }))
 
-    //Get the 'href' attribute of portrait switch button
-    /*cy.get('.mod_portrait_switch_link').eq(1).then((url)=>
-    {
-        const link= url.attr('href')
-        cy.log(link)
-    })*/
-
     while(1){
         if(currentUrl.indexOf(link)!=-1){
         break;
         }
         
-        //cy.log(link)
         cy.get('.mod_portrait_switch_link').eq(1).click()
         cy.wait(1000)
         var link = await promisify(cy.get('.mod_portrait_switch_link').eq(1).then($el => $el.attr('href')))
-        //cy.log(currentUrl)
+        
         }
 })
 })
