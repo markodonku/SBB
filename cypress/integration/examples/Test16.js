@@ -25,7 +25,7 @@ describe('Global search testing',function(){
         searchPagee.getSubmit().click()
         cy.wait(2000)
         searchPagee.getTabs().each(($el,index,$list) =>{
-            expect($el).not.to.have.class('mod_tabs_tablistitem is_disabled')
+            expect($el).to.be.visible
         })
 
 

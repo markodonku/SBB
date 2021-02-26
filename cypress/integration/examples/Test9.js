@@ -55,7 +55,7 @@ it('Offer can be opened',function()
 it('Leisure Search', function()
 {
     cy.visit(Cypress.env('url')+'de/freizeit-ferien/ideen.html')
-   leisurePage.getRegionSearchField().type('ber')
+   leisurePage.getRegionSearchField().type('bas')
    cy.wait(3000)
    cy.get('.mod_autocomplete_suggestion').find('p').each(($el, index, $list) => {
 
@@ -64,11 +64,12 @@ it('Leisure Search', function()
         $el.click()
     
    }
+    }) 
    cy.wait(2000)
    leisurePage.getSearchButton().click()
    cy.wait(2000)
    leisurePage.getSearchResults().should('be.visible')
-})
+
 })
 
 })

@@ -46,18 +46,20 @@ describe('Testing bahnhof services detail page',function(){
         })
     })
 
-    it('NBC component works as expected', async ()=>
+    it('NBC component works as expected', function()
     {
+        cy.visit(Cypress.env('url')+'de/abos-billette/abonnemente/halbtax.html')
         travelcardsTickets.getNBCItem().each(($el,index,$list)=>
         {
             expect($el).to.be.visible
+            //cy.contains($el).scrollIntoView()
         })
-
+        
         cy.wait(1000)
         cy.scrollTo('bottom')
         cy.wait(3000)
 
-        await travelcardsTickets.getNBCItem().each(($el,index,$list)=>
+        travelcardsTickets.getNBCItem().each(($el,index,$list)=>
         {
             expect($el.find('div')).to.have.class('mod_nbc_section is_scrolled is_set')
             cy.wait(1000)

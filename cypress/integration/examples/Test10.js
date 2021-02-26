@@ -13,7 +13,7 @@ describe('Testing leisure&holiday detail page',function(){
           this.data=data
         })
         
-        cy.visit(Cypress.env('url')+'de/freizeit-ferien/ideen/angebot.html/veranstaltungen/fondation-pierre-gianadda-martigny')
+        
 
       })
 
@@ -22,6 +22,7 @@ describe('Testing leisure&holiday detail page',function(){
 
 it('Bottom teaser visible',function()
  {
+    cy.visit(Cypress.env('url')+'de/freizeit-ferien/ideen/angebot.html/veranstaltungen/fondation-pierre-gianadda-martigny')
     cy.wait(3000) 
     leisurePage.getBottomTeaser().find('.mod_lh_teaser_homepage_container').should('be.visible')
     leisurePage.getBottomTeaser().find('div > h2').then(function(el)
