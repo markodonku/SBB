@@ -24,5 +24,7 @@
   "telephone": "+38975356784",
   "bestell": "1234567890",
   "message": "This is test content, do not consider as official request",
-  "backgroundcolor": "rgb(246, 246, 246)"
+  "backgroundcolor": "rgb(246, 246, 246)",
+  "CUGuser": "sbb",
+  "CUGpass": "benefit"
 }

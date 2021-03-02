@@ -102,13 +102,15 @@ it('Header expandable',function()
 
 it('F&FBadgeVisible',function()
 {
+    cy.scrollTo('top')
+    cy.wait(1000)
     homePage.getLeisureHoliday().trigger('mouseover')
     cy.wait(2000)
     homePage.getBadge().should('be.visible')
 
 })
 
-it('Login overlay',function()
+/*it('Login overlay',function()
 {
     cy.get('[data-metanav="profile"] > .mod_metanav_linkitem').click()
     cy.wait(3000)
@@ -116,6 +118,6 @@ it('Login overlay',function()
     {
         cy.log('Overlay is opened')
     }
-})
+})*/
 
 })
