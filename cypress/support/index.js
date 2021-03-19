@@ -14,6 +14,7 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
+import '@4tw/cypress-drag-drop'
 import './commands'
 import 'cypress-promise/register'
 import 'babel-polyfill'

@@ -1,4 +1,5 @@
 // ***********************************************
+require('@4tw/cypress-drag-drop')
 import promisify from 'cypress-promise'
 import TravelcardsTickets from '../support/PageObject/TravelacardsTickets'
 import CampaignPage from '../support/PageObject/CampaignPage'

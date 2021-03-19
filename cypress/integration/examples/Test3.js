@@ -22,6 +22,8 @@ describe('Testing Touch timetable',function(){
         document.dispatchEvent(new Event('timetable-touch-load-images'));
         cy.wait(4000)
         
+        homePage.getTimetable().trigger('mouseover')
+        cy.wait(1000)
         homePage.getTimetable().click()
         cy.get('.mod_timetable_switch_module_wrapper.var_touch').should('be.visible')
         cy.wait(4000)
@@ -32,17 +34,21 @@ describe('Testing Touch timetable',function(){
         //cy.wrap('#main > div:nth-child(1) > div > div > div > div.mod_timetable_switch_module_wrapper.var_touch > div > div.mod_timetable_touch_boxes_wrapper > ul > li:nth-child(1) > div.mod_timetable_touch_box.has_content.has_image.has_title.var_doublewidth.var_doubleheight').click()
 
         //cy.get("select:first").select("#main > div:nth-child(1) > div > div > div > div.mod_timetable_switch_module_wrapper.var_touch > div > div.mod_timetable_touch_boxes_wrapper > ul > li:nth-child(1) > div.mod_timetable_touch_box.has_content.has_image.has_title.var_doublewidth.var_doubleheight", {force: true})
-var startPoint= "#main > div:nth-child(1) > div > div > div > div.mod_timetable_switch_module_wrapper.var_touch > div > div.mod_timetable_touch_boxes_wrapper > ul > li:nth-child(1) > div.mod_timetable_touch_box.has_content.has_image.has_title.var_doublewidth.var_doubleheight"
-var endPoint= "#main > div:nth-child(1) > div > div > div > div.mod_timetable_switch_module_wrapper.var_touch > div > div.mod_timetable_touch_boxes_wrapper > ul > li:nth-child(2) > div.mod_timetable_touch_box.has_content.has_image.has_title.var_left2.var_doublewidth"
-        /*cy.get(startPoint).contains('Zürich HB').should('be.visible', {force: true})
-        cy.get(endPoint).contains('Bern').should('be.visible', {force: true})
-        cy.get(startPoint).contains('Zürich HB').drag(endPoint, {force: true})*/
+var startPoint= ":nth-child(1) > .mod_timetable_touch_box"
+var endPoint= ":nth-child(2) > .mod_timetable_touch_box"
+        //cy.get(startPoint).contains('Zürich HB').should('be.visible', {force: true})
+        //cy.get(endPoint).contains('Bern').should('be.visible', {force: true})
+        //cy.get(startPoint).contains('Zürich HB').drag(endPoint, {force: true})
 
-        cy.get('.mod_timetable_touch_boxes > li:nth-child(1) > div:nth-child(1) > .mod_timetable_touch_box_image_wrapper', {force: true}).dragTo('.mod_timetable_touch_boxes > li:nth-child(3) > div:nth-child(1) > .mod_timetable_touch_box_image_wrapper', {force: true})
+        //cy.get('.mod_timetable_touch_boxes > li:nth-child(1) > div:nth-child(1) > .mod_timetable_touch_box_image_wrapper', {force: true}).dragTo('.mod_timetable_touch_boxes > li:nth-child(3) > div:nth-child(1) > .mod_timetable_touch_box_image_wrapper', {force: true})
 
-        /*cy.get(startPoint, {force: true}).contains('Zürich HB').trigger('mousedown', {which: 1})
-        cy.get(endPoint, {force: true}).contains('Bern').trigger('mousemove').trigger('mouseup')*/
+        //cy.get(startPoint, {force: true}).contains('Zürich HB').trigger('mousedown', {which: 1})
+        //cy.get(endPoint, {force: true}).contains('Bern').trigger('mousemove').trigger('mouseup')
+
+        //cy.get(startPoint).find('img').trigger('mousedown', {force: true})
+        //cy.get(endPoint).find('img').trigger('mouseup', {force: true})
     
+        //cy.get(startPoint).find('.mod_timetable_touch_box_image_wrapper > img').move({x:1272, y:176}, {force: true})
        
       })
     

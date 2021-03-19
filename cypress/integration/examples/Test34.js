@@ -11,7 +11,6 @@ describe('Testing redirecting function',function(){
         })
       })
 
-    const courseRegistrationPage=new CourseRegistrationPage()
 
 
 it('Redirection works', function()
