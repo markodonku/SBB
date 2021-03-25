@@ -61,8 +61,18 @@ describe('Testing bahnhof services detail page',function(){
 
         travelcardsTickets.getNBCItem().each(($el,index,$list)=>
         {
+            //var klasa=$el.find('div').attr('class')
+            expect($el.find('div').attr('class')).includes('is_scrolled', 'is_set')
+
+            //Checking the class by element index
+            /*if(index===0)
+            {
             expect($el.find('div')).to.have.class('mod_nbc_section is_scrolled is_set')
-            cy.wait(1000)
+            }
+            else
+            {
+                expect($el.find('div')).to.have.class('mod_nbc_section is_set is_scrolled')
+            }*/
         })
     })
 
@@ -75,10 +85,13 @@ describe('Testing bahnhof services detail page',function(){
 
     it('PDF can be downloaded', function()
     {
-        cy.request('https://int-www.sbb.ch/content/dam/sbb/de/pdf/abos-billette/abonnemente/ga/karte-geltungsbereich-ga-halbtax-stand_d_barrierefrei.pdf.sbbdownload.pdf').then((xhr)=>
-        {
-            assert.isNotNull(xhr.allRequestResponses.body, 'Body not empty')
-        })
+          cy.request('https://int-www.sbb.ch/content/dam/sbb/de/pdf/abos-billette/abonnemente/ga/karte-geltungsbereich-ga-halbtax-stand_d_barrierefrei.pdf.sbbdownload.pdf').then(function(response)
+          {
+                expect(response.status).to.eq(200)
+                cy.writeFile("cypress/downloads/test5.pdf", response.body)
+                cy.readFile("cypress/downloads/test5.pdf")
+          })
+
     })
 
 })

@@ -11,8 +11,11 @@
   "devDependencies": {
     "@4tw/cypress-drag-drop": "^1.4.0",
     "babel-polyfill": "^6.26.0",
-    "cypress": "^6.2.0",
+    "cypress": "^6.3.0",
     "cypress-promise": "^1.1.0",
     "mocha": "^8.2.1"
+  },
+  "dependencies": {
+    "cypress-downloadfile": "^1.2.0"
   }
 }

@@ -110,7 +110,7 @@ it('F&FBadgeVisible',function()
 
 })
 
-/*it('Login overlay',function()
+it('Login overlay',function()
 {
     cy.get('[data-metanav="profile"] > .mod_metanav_linkitem').click()
     cy.wait(3000)
@@ -118,6 +118,6 @@ it('F&FBadgeVisible',function()
     {
         cy.log('Overlay is opened')
     }
-})*/
+})
 
 })

@@ -12,5 +12,7 @@
         "urlsearch": "https://int-www.sbb.ch/de/meta/seiten/suche.html",
         "urlcargo": "https://int-www.sbbcargo.com/"
       },
-      "projectId": "s424jx"
+    "projectId": "s424jx",
+    "downloadsFolder": "cypress/downloads"
+    
 }

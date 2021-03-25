@@ -3,6 +3,7 @@ require('@4tw/cypress-drag-drop')
 import promisify from 'cypress-promise'
 import TravelcardsTickets from '../support/PageObject/TravelacardsTickets'
 import CampaignPage from '../support/PageObject/CampaignPage'
+require('cypress-downloadfile/lib/downloadFileCommand')
 // This example commands.js shows you how to
 // create various custom commands and overwrite
 // existing commands.
