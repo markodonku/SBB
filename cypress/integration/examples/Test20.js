@@ -88,8 +88,8 @@ describe('Testing bahnhof services detail page',function(){
           cy.request('https://int-www.sbb.ch/content/dam/sbb/de/pdf/abos-billette/abonnemente/ga/karte-geltungsbereich-ga-halbtax-stand_d_barrierefrei.pdf.sbbdownload.pdf').then(function(response)
           {
                 expect(response.status).to.eq(200)
-                cy.writeFile("cypress/downloads/test5.pdf", response.body)
-                cy.readFile("cypress/downloads/test5.pdf")
+                cy.writeFile("cypress/downloads/test1.pdf", response.body)
+                cy.readFile("cypress/downloads/test1.pdf")
           })
 
     })
