@@ -2,17 +2,6 @@
 
 describe('Testing PDF download',function(){
 
-    beforeEach(() => {
-        // runs once before each test in the block
-
-        cy.fixture('example').then(function(data)
-        {
-          this.data=data
-        })
-      })
-
-
-
 it('Download PDF file from the table', function()
 {
   cy.visit('https://int-www.sbb.ch/de/fahrplan/online-fahrplan/pdf-fahrplaene/abfahrtsplakate.html?search=bern&_charset_=UTF-8&page=1')
