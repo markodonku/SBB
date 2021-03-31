@@ -80,6 +80,21 @@ getStandardTimetable()
 {
     return cy.get('.mod_timetable_switch_button.var_default')
 }
+
+getSearchButton()
+{
+    return cy.get('.mod_metanav_listitem:nth-child(1)')
+}
+
+getInputSearchField()
+{
+    return cy.get('#mod_search_header_input')
+}
+
+getSubmitSearch()
+{
+    return cy.get('.mod_search_button')
+}
 }
 
 export default HomePage;

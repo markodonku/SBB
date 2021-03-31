@@ -26,5 +26,8 @@
   "message": "This is test content, do not consider as official request",
   "backgroundcolor": "rgb(246, 246, 246)",
   "CUGuser": "sbb",
-  "CUGpass": "benefit"
+  "CUGpass": "benefit",
+  "firstInternalSearch": "Velo mitnehmen",
+  "secondInternalSearch": "Halbtax",
+  "thirdInternalSearch": "Business"
 }
