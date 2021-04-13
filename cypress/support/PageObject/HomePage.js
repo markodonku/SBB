@@ -53,7 +53,7 @@ getHeader()
 
 getLeisureHoliday()
 {
-    return cy.get('#ui-id-115')
+    return cy.get('#ui-id-114')
 }
 
 getBadge()
