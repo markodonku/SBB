@@ -33,7 +33,7 @@ getOverlay()
 
 getFooterClock()
 {
-    return cy.get('.mod_clock_container_open_button')
+    return cy.get('button.mod_clock_container_open_button')
 }
 
 getSwissLogo()
@@ -53,7 +53,7 @@ getHeader()
 
 getLeisureHoliday()
 {
-    return cy.get('#ui-id-114')
+    return cy.get('#ui-id-116')
 }
 
 getBadge()

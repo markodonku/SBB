@@ -21,7 +21,7 @@ describe('Testing Home Page',function(){
 
 it('Logo is visible',function()
  {
-   cy.visit(Cypress.env('url')+'?bsdfbgh')
+   cy.visit(Cypress.env('url')+'?bsdfbgh541')
    homePage.getSBBLogo().should('be.visible')
 
  })
@@ -83,6 +83,7 @@ it('Header icons visible',function()
 
 it('Footer',function()
 {
+    cy.scrollTo('bottom')
     homePage.getFooterClock().should('be.visible')
     homePage.getSwissLogo().should('be.visible')
 })
